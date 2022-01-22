@@ -54,7 +54,7 @@ const MyPurchases = () => {
 
     return (
         <div>
-            <div className="body overflow-hidden me-5" >
+            <div className="body overflow-hidden " >
                 <div  >
                     <div style={{
                         backgroundImage: "url('https://www.suvastuproperties.com/wp-content/uploads/2018/12/ahs-2.jpg')",
@@ -77,7 +77,7 @@ const MyPurchases = () => {
                 </div>
 
 
-                <div className="row row-cols-1 row-cols-md-1 row-cols-lg-3 g-4 ms-5   ">
+                <div className="row row-cols-1 row-cols-md-1 row-cols-lg-3 g-4   ">
                     {
 
                         myPurchase.map(purchase => <div >

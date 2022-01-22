@@ -106,7 +106,7 @@ const ManageAllPurchases = () => {
             <h1 style={{ color: "white" }} className='mt-4 mb-4'>Total Purchases : {allpurchases.length}</h1>
 
             {
-                <div className="row row-cols-1 row-cols-md-1 row-cols-lg-3 g-1 ms-5  ">
+                <div className="row row-cols-1 row-cols-md-1 row-cols-lg-3 g-1">
 
                     {
                         allpurchases.map(purchase => <ManageAllPurchase

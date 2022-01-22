@@ -19,7 +19,7 @@ const Apartments = () => {
             </div>
 
             {
-                <div className="row row-cols-1 row-cols-md-1 row-cols-lg-3 g-4 ms-5 ps-5 ">
+                <div className="row row-cols-1 row-cols-md-1 row-cols-lg-3 g-4  ">
                     {
                         apartments.map(apartment => <Apartment key={apartment._id} apartment={apartment}
                         >

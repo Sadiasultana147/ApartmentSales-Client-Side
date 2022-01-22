@@ -20,7 +20,7 @@ const About = () => {
                     <h1 style={{
 
                         paddingTop: "300px",
-                        fontSize: 90
+                        fontSize: 85
 
                     }}>COMPANY PROFILE</h1>
                 </div>
