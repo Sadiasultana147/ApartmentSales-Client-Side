@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import { useHistory, useLocation } from 'react-router';
 import { Link } from 'react-router-dom';
-
 import useAuth from '../../Components/Hooks/useAuth';
 import './LogIn.css'
 
@@ -52,10 +51,6 @@ const LogIn = () => {
                 setIsLoading(false)
             })
     }
-
-
-
-
 
     const handleGoogleLogin = () => {
         signInWithGoogle()

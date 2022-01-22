@@ -1,9 +1,9 @@
-import React, { useState } from 'react';
-import { Card, Col } from 'react-bootstrap';
+import React from 'react';
+
 
 const ManageAllPurchase = (props) => {
     //const [allPurchases, setPurchases] = useState([]);
-    const { _id, status, projectImage, userEmail, UserName, city, address, contact, projectName } = props.purchase
+    const { _id, status, projectImage, userEmail, UserName, city, address, projectName } = props.purchase
     const { handleConfirm } = props;
     const { handleDelete } = props;
     console.log(props.handleConfirm)
@@ -32,19 +32,13 @@ const ManageAllPurchase = (props) => {
 
                             <hr style={{ border: "2px solid blue" }} />
 
-
-
                             <h6 className="card-text" style={{ color: "white" }}> {status}</h6>
                         </div>
-
                         <div className="pb-5">
                             <div>
                                 {
                                     status === "pending" &&
                                     < button onClick={() => handleConfirm(_id)} className="btn" style={{ backgroundColor: "indigo", color: "white" }} >Confirm</button>
-
-
-
 
                                 }
                             </div>

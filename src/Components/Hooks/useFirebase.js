@@ -73,19 +73,11 @@ const useFirebase = () => {
             .finally(() => setIsLoading(false));
     }
 
-    // const hanldeUserInfoRegister = (email) => {
-    //     fetch("https://vast-dusk-02829.herokuapp.com/addUserInfo", {
-    //         method: "POST",
-    //         headers: { "content-type": "application/json" },
-    //         body: JSON.stringify({ email }),
-    //     })
-    //         .then((res) => res.json())
-    //         .then((result) => console.log(result));
-    // };
+
 
     const hanldeUserInfoRegister = (email, displayName, method) => {
         const user = { email, displayName };
-        fetch('https://vast-dusk-02829.herokuapp.com/addUserInfo', {
+        fetch('https://boiling-falls-89635.herokuapp.com/addUserInfo', {
             method: method,
             headers: {
                 'content-type': 'application/json'

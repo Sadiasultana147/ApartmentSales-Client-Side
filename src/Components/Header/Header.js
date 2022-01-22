@@ -38,7 +38,7 @@ const Header = (props) => {
                         <NavLink to="/explore" className="nav-item nav-link" style={{ color: "white", fontSize: "20px" }}>More Projects</NavLink>
                         {
                             user?.email &&
-                            <NavLink to="/dashboard" className="nav-item nav-link" style={{ color: "white", fontSize: "20px" }}>Dash Board</NavLink>
+                            <NavLink to="/dashboard" className="nav-item nav-link" style={{ color: "white", fontSize: "20px" }}>DashBoard</NavLink>
                         }
 
 

@@ -5,7 +5,7 @@ const About = () => {
         <div >
             <div className="body  overflow-hidden">
                 <div style={{
-                    backgroundImage: "url('https://navana-realestate.com/assets/frontend/img/banner/about.jpg')",
+                    backgroundImage: "url('	https://navana-realestate.com/frontend/assets/img/slider/slider_4.webp')",
                     backgroundPosition: "center center",
                     backgroundAttachment: "fixed",
                     backgroundSize: "cover",
@@ -20,8 +20,9 @@ const About = () => {
                     <h1 style={{
 
                         paddingTop: "300px",
+                        fontSize: 90
 
-                    }}>Company Profile</h1>
+                    }}>COMPANY PROFILE</h1>
                 </div>
                 <div>
 

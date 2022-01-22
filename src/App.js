@@ -27,6 +27,7 @@ import NotFound from './Components/NotFound/NotFound'
 
 
 
+
 function App() {
   return (
     <div className="App">
@@ -57,9 +58,7 @@ function App() {
               <AddApartment></AddApartment>
             </Route>
 
-            <Route path="/manageservices">
-              <ManageServices></ManageServices>
-            </Route>
+           
             <Route path="/makeadmin">
               <MakeAdmin></MakeAdmin>
             </Route>
@@ -76,6 +75,7 @@ function App() {
             <PrivateRoute path="/mypurchase">
               <MyPurchases></MyPurchases>
             </PrivateRoute>
+
 
             <PrivateRoute path="/pay">
               <Pay></Pay>
@@ -96,6 +96,9 @@ function App() {
             <PrivateRoute path="/purchases/:_id">
               <Purchase></Purchase>
             </PrivateRoute>
+            {/* <Route path="/manageservices/:editid">
+              <ManageServices></ManageServices>
+            </Route> */}
 
             {/* PrivateRoute END */}
 

@@ -3,17 +3,13 @@ import React, { useEffect, useState } from 'react';
 import MyPurchases from '../MyParchases/MyPurchases';
 import Pay from '../Pay/Pay';
 import Review from '../ReView/Review';
-
 import useAuth from '../Hooks/useAuth'
 import './DashBoard.css'
 import AddApartment from '../AddApartment/AddApartment'
 import ManageAllPurchases from '../ManageAllPurchases/ManageAllPurchases'
-
 import styled from "styled-components";
 import { Link } from "react-router-dom";
 import * as FaIcons from "react-icons/fa";
-
-
 import { IconContext } from "react-icons/lib";
 import MakeAdmin from '../MakeAdmin/MakeAdmin';
 import ManageServices from '../ManageServices/ManageServices';
@@ -59,11 +55,6 @@ const SidebarWrap = styled.div`
   width: 100%;
   
 `;
-
-
-
-
-
 const UserDashBoard = () => {
 
     const { logOut, user, isAdmin, setIsAdmin } = useAuth();
@@ -71,13 +62,10 @@ const UserDashBoard = () => {
     const [isLoading, setIsLoading] = useState(true)
 
     const [control, setControl] = useState('dashboardcontainer');
-
-
-
     const showSidebar = () => setSidebar(!sidebar);
 
     useEffect(() => {
-        fetch(`https://vast-dusk-02829.herokuapp.com/checkAdmin/${user?.email}`)
+        fetch(`https://boiling-falls-89635.herokuapp.com/checkAdmin/${user?.email}`)
             .then((res) => res.json())
             .then((data) => {
                 console.log(data)
@@ -96,9 +84,6 @@ const UserDashBoard = () => {
 
     return (
         <div className="body overflow-hidden" >
-
-
-
             <IconContext.Provider value={{ color: "#fff" }}>
                 <Nav >
                     <NavIcon to="#">
@@ -165,7 +150,7 @@ const UserDashBoard = () => {
                                             onClick={() => setControl("mypurchase")}
                                             className=" li "
                                         >
-                                            My Purchases
+                                            My Selected Apartments
                                         </li>
                                         <li
                                             onClick={() => setControl("pay")}
@@ -187,11 +172,6 @@ const UserDashBoard = () => {
 
                                     </div>
                                 }
-
-
-
-
-
                             </SidebarWrap>
                         </SidebarNav>
                     </div>
@@ -228,10 +208,6 @@ const UserDashBoard = () => {
 
                             </div>
                         )}
-
-
-
-
                 </div>
             </IconContext.Provider>
 

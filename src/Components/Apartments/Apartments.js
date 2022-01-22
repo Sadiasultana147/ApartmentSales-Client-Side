@@ -3,12 +3,13 @@ import Apartment from '../Apartment/Apartment';
 
 const Apartments = () => {
     const [apartments, setApartments] = useState([]);
-
+    // fetch data from database
     useEffect(() => {
-        fetch('https://vast-dusk-02829.herokuapp.com/apartmentList')
+        fetch('https://boiling-falls-89635.herokuapp.com/apartmentList')
             .then(res => res.json())
-            .then(data => setApartments(data.slice(0, 6)))
+            .then(data => setApartments(data.slice(0, 9)))
     }, [])
+
     return (
         <div className="overflow-hidden">
             <div className="mt-5">
@@ -18,25 +19,14 @@ const Apartments = () => {
             </div>
 
             {
-
-                <div className="row row-cols-1 row-cols-md-3 row-cols-lg-3 g-5 d-flex justify-content-center mb-5 pb-5  ">
-
-
+                <div className="row row-cols-1 row-cols-md-1 row-cols-lg-3 g-4 ms-5 ps-5 ">
                     {
                         apartments.map(apartment => <Apartment key={apartment._id} apartment={apartment}
-
                         >
 
                         </Apartment>)
                     }
                 </div>
-
-
-
-
-
-
-
             }
         </div>
     );

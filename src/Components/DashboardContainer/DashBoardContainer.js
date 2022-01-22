@@ -4,11 +4,9 @@ import './DashBoardContainer.css'
 const DashBoardContainer = () => {
     return (
         <div>
-
-
             <div  >
                 <div style={{
-                    backgroundImage: "url('https://navana-realestate.com/assets/frontend/img/category-banner.jpg')",
+                    backgroundImage: "url('https://images.pexels.com/photos/129494/pexels-photo-129494.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940')",
                     backgroundPosition: "center center",
                     backgroundAttachment: "fixed",
                     backgroundSize: "cover",

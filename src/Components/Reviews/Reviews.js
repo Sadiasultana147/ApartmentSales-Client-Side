@@ -8,7 +8,7 @@ const Reviews = () => {
 
     useEffect(() => {
 
-        fetch('https://vast-dusk-02829.herokuapp.com/addReview')
+        fetch('https://boiling-falls-89635.herokuapp.com/addReview')
             .then(res => res.json())
             .then(data => setAllReviews(data))
     }, [])

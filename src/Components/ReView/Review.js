@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { useForm } from 'react-hook-form';
+import Swal from 'sweetalert2';
 import useAuth from '../../Components/Hooks/useAuth'
 
 
@@ -10,7 +11,7 @@ const Review = () => {
 
     console.log(user.email)
     const onSubmit = (data) => {
-        fetch("https://vast-dusk-02829.herokuapp.com/addReview", {
+        fetch("https://boiling-falls-89635.herokuapp.com/addReview", {
             method: "POST",
             headers: { "content-type": "application/json" },
             body: JSON.stringify(data),
@@ -18,7 +19,15 @@ const Review = () => {
             .then((res) => res.json())
             .then((result) => {
                 if (result.insertedId) {
-                    alert('Successfully added a review.')
+                    Swal.fire({
+                        title: "New Project Added Successfully",
+                        showClass: {
+                            popup: "animate__animated animate__fadeInDown",
+                        },
+                        hideClass: {
+                            popup: "animate__animated animate__fadeOutUp",
+                        },
+                    });
                     reset();
                 }
             });
